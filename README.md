@@ -24,7 +24,7 @@ npm run build
 Use this one-liner (replace with your real values):
 
 ```bash
-claude mcp add Search MCP -s user -e SEARCH_MCP_API_KEY="sk-your-real-key" -- npx search-mcp
+claude mcp add URL-Context-MCP -s user -e GOOGLE_API_KEY="sk-your-real-key" -- npx @taiyokimura/url-context-mcp@latest
 ```
 
 To remove:
