@@ -1,0 +1,31 @@
+{
+  "name": "search-mcp",
+  "version": "0.1.0",
+  "description": "Universal MCP server providing Brave Search tools (web, local, rich)",
+  "type": "module",
+  "bin": {
+    "search-mcp": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "prepare": "npm run build",
+    "start": "node ./build/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "undici": "^6.19.8",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
+  }
+}
+
