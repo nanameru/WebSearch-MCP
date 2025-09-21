@@ -40,9 +40,9 @@ Create .cursor/mcp.json in your client (do not commit it here):
 ```json
 {
   "mcpServers": {
-    "search-mcp": {
+    "url-context-mcp": {
       "command": "npx",
-      "args": ["search-mcp"],
+      "args": ["@taiyokimura/url-context-mcp@latest"],
       "env": { "SEARCH_MCP_API_KEY": "sk-your-real-key" },
       "autoStart": true
     }
@@ -58,7 +58,7 @@ Create .cursor/mcp.json in your client (do not commit it here):
 Install via URI or CLI:
 
 ```bash
-code --add-mcp '{"name":"search-mcp","command":"npx","args":["search-mcp"],"env":{"SEARCH_MCP_API_KEY":"sk-your-real-key"}}'
+code --add-mcp '{"name":"url-context-mcp","command":"npx","args":["@taiyokimura/url-context-mcp@latest"],"env":{"SEARCH_MCP_API_KEY":"sk-your-real-key"}}'
 ```
 
 </details>
@@ -74,7 +74,7 @@ Follow the MCP install guide and reuse the standard config above.
 <summary>LM Studio</summary>
 
 - Command: npx
-- Args: ["search-mcp"]
+- Args: ["@taiyokimura/url-context-mcp@latest"]
 - Env: SEARCH_MCP_API_KEY=sk-your-real-key
 
 </details>
@@ -84,7 +84,7 @@ Follow the MCP install guide and reuse the standard config above.
 
 - Type: STDIO
 - Command: npx
-- Args: search-mcp
+- Args: @taiyokimura/url-context-mcp@latest
 - Enabled: true
 
 </details>
@@ -98,9 +98,9 @@ Example ~/.config/opencode/opencode.json:
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
-    "search-mcp": {
+    "url-context-mcp": {
       "type": "local",
-      "command": ["npx", "search-mcp"],
+      "command": ["npx", "@taiyokimura/url-context-mcp@latest"],
       "enabled": true
     }
   }
@@ -136,17 +136,17 @@ args = ["--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-s
 This server (minimal):
 
 ```toml
-[mcp_servers.search-mcp]
+[mcp_servers.url-context-mcp]
 command = "npx"
-args = ["search-mcp"]
+args = ["@taiyokimura/url-context-mcp@latest"]
 # Optional:
 # SEARCH_MCP_API_KEY = "sk-your-real-key"
-# MCP_NAME = "search-mcp"
+# MCP_NAME = "url-context-mcp"
 ```
 
 ## Configuration (Env)
 - SEARCH_MCP_API_KEY: Your API key (if applicable)
-- MCP_NAME: Server name override (default: search-mcp)
+- MCP_NAME: Server name override (default: url-context-mcp)
 
 ## Available Tools
 
@@ -190,18 +190,18 @@ args = ["search-mcp"]
 - Brave Search API: https://api.search.brave.com/app/documentation
 
 ## Name Consistency & Troubleshooting
-- Always use CANONICAL_ID (search-mcp) for identifiers and keys.
-- Use CANONICAL_DISPLAY (Search MCP) only for UI labels.
+- Always use CANONICAL_ID (url-context-mcp) for identifiers and keys.
+- Use CANONICAL_DISPLAY (URL-Context MCP) only for UI labels.
 - Do not mix legacy keys after registration.
 
 Consistency Matrix:
-- npm package name → search-mcp
-- Binary name → search-mcp
-- MCP server name (SDK metadata) → search-mcp
-- Env default MCP_NAME → search-mcp
-- Client registry key → search-mcp
-- UI label → Search MCP
+- npm package name → @taiyokimura/url-context-mcp
+- Binary name → url-context-mcp
+- MCP server name (SDK metadata) → url-context-mcp
+- Env default MCP_NAME → url-context-mcp
+- Client registry key → url-context-mcp
+- UI label → URL-Context MCP
 
 Conflict Cleanup:
-- Remove any stale keys (e.g., old display names) and re-add with search-mcp only.
+- Remove any stale keys (e.g., old display names) and re-add with url-context-mcp only.
 - Cursor: configure in the UI; this project intentionally omits .cursor/mcp.json.

@@ -6,7 +6,7 @@ import { fetch } from 'undici';
 import { z } from 'zod';
 
 // Name normalization
-const CANONICAL_ID = (process.env.MCP_NAME ?? 'search-mcp');
+const CANONICAL_ID = (process.env.MCP_NAME ?? 'url-context-mcp');
 const ENV_PREFIX = 'SEARCH_MCP';
 
 // Environment variables

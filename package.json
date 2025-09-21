@@ -1,10 +1,10 @@
 {
-  "name": "search-mcp",
+  "name": "@taiyokimura/url-context-mcp",
   "version": "0.1.0",
   "description": "Universal MCP server providing Brave Search tools (web, local, rich)",
   "type": "module",
   "bin": {
-    "search-mcp": "./build/index.js"
+    "url-context-mcp": "./build/index.js"
   },
   "files": [
     "build"
